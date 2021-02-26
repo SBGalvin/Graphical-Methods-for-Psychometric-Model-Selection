@@ -7,11 +7,16 @@ contains a Rasch model estimation primer.
 ## 01 Setup
 
 1.  First go to the R website and download the latest version of
-    (R)\[<https://cran.r-project.org/bin/windows/>\].  
+    [R](https://cran.r-project.org/bin/windows/).  
 2.  Then go to the Rstudio link and download the latest **FREE** version
-    of (Rstudio)\[<https://rstudio.com/products/rstudio/download/>\]
-3.  Once the download has completed, open Rstudio
-4.  copy the URL to this project repository
+    of [Rstudio](https://rstudio.com/products/rstudio/download/)
+3.  Copy the URL to this project repository
+4.  Once the download has completed, open Rstudio
+5.  Click File \> New Project…
+6.  A window menu will open, Click \> Version Control \> Git
+7.  Copy this repo URL into the repository URL box
+8.  Select a directory on your device
+9.  Click OK
 
 <!-- end list -->
 
@@ -23,14 +28,14 @@ library(kableExtra)
 library(tidyverse)
 ```
 
-    ## -- Attaching packages -------------------------------------------------------------------------- tidyverse 1.3.0 --
+    ## -- Attaching packages --------------------------------------------------------------------------------------------------- tidyverse 1.3.0 --
 
     ## v ggplot2 3.3.2     v purrr   0.3.4
     ## v tibble  3.0.3     v dplyr   1.0.1
     ## v tidyr   1.1.1     v stringr 1.4.0
     ## v readr   1.3.1     v forcats 0.5.0
 
-    ## -- Conflicts ----------------------------------------------------------------------------- tidyverse_conflicts() --
+    ## -- Conflicts ------------------------------------------------------------------------------------------------------ tidyverse_conflicts() --
     ## x dplyr::filter()     masks stats::filter()
     ## x dplyr::group_rows() masks kableExtra::group_rows()
     ## x dplyr::lag()        masks stats::lag()
