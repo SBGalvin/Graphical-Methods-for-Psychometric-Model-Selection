@@ -9,17 +9,16 @@ This ReadMe details how to use materials in this repository. See
 1.  First go to the R website and download the latest version of
     [R](https://cran.r-project.org/bin/windows/).  
 2.  Then go to the Rstudio link and download the latest **FREE** version
-    of [Rstudio](https://rstudio.com/products/rstudio/download/)
-3.  Copy the URL to this project repository
-4.  Once the download has completed, open Rstudio
-5.  Click File \> New Project…
-6.  A window menu will open, Click \> Version Control \> Git
-7.  Copy this repo URL into the repository URL box
-8.  Select a directory on your device
-9.  Click OK
+    of [Rstudio](https://rstudio.com/products/rstudio/download/)  
+3.  Once the download has completed, open Rstudio
+4.  Click File \> New Project…
 
-This will open a new R project where you have cloned **this**
-repository.
+</br> <img src ="img/NewPrj_1.png" align ="center" width="200"/>
+<img src ="img/NewPrj_2.png" align ="center" width="200"/>
+<img src ="img/NewPrj_3.png" align ="center" width="200"/></br>
+
+5.  Download the files from this repository
+6.  Copy the repository files into your R project
 
 ## 02 Repository Structure
 
@@ -100,8 +99,8 @@ environment.
 rnorm(n = 10, mean = 100, sd = 15)        # outputs directly to the console
 ```
 
-    ##  [1] 108.13509 102.19197  97.07649  90.43526 113.04085  83.72661  80.60416
-    ##  [8] 103.59966 119.60605 104.92826
+    ##  [1]  93.24020  77.99301  83.29007  78.80562 115.15239  83.30422  90.79982
+    ##  [8] 100.55956 106.64391  82.22702
 
 We need to store the output in an object. This way, our output will save
 to the environment and we can do things with it:
@@ -112,13 +111,13 @@ x <- rnorm(n = 1000, mean = 100, sd = 15) # sample 1000 values from a normal dis
 
 ### Applying Functions to Objects
 
-We can print the first6 values of x directly to the console:
+We can print the first 6 values of x directly to the console:
 
 ``` r
 head(x, n = 6L) # show first n = 6 values ## (6L is integer 6)
 ```
 
-    ## [1] 104.79275 125.56757 124.19855 101.24788  86.13176  88.93777
+    ## [1] 111.90547 118.49511  78.68794  88.96350  89.18858 123.08010
 
 We can print a summary of x to the console:
 
@@ -127,7 +126,7 @@ summary(x)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##   51.22   89.65  101.22  101.01  111.08  157.40
+    ##   49.44   90.08  100.17  100.25  110.37  141.28
 
 We can produce a histogram of x, viewable in the plots pane:
 
@@ -137,7 +136,7 @@ hist(x, col = "steelblue")
 
 ![](ReadMe_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-We can apply a funciton and save the output as an object…
+We can apply a function and save the output as an object…
 
 ``` r
 x_hat    <- mean(x)  # mean
@@ -154,5 +153,5 @@ cat(paste0("Mean of x: ",
              "SD of x: ", round(x_sd, 2)))
 ```
 
-    ## Mean of x: 101.01
-    ## SD of x: 15.64
+    ## Mean of x: 100.25
+    ## SD of x: 14.89
