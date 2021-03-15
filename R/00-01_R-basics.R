@@ -46,17 +46,17 @@ x3 <- 44/4*100 # this code will run
 1 == 1              # TRUE: 1 is equal to 1
 3 > 1               # TRUE: 3 is greater than 1
 2.5 >= 2.0          # TRUE: 2.5 is at least as great as 2.0
-2 = 3               # FALSE : 2 is equal to 3?
+2 == 3              # FALSE : 2 is equal to 3?
 10 == 1000^(1/2)    # FALSE: 10 is equal to the square root of 1000 (100)
 
 # Logical operators are used to carry out Boolean operations
-# !        Logical NOT negating relational operator
-2 != 3
-# &         Element-wise logical AND can examine an array
+# !         # Logical NOT negating relational operator
+2 != 3      # False
+# &         # Element-wise logical AND can examine an array
 3&3
-# &&        Logical AND examines only the first element of the operands resulting into a single length logical vector.
-# |         Element-wise logical OR can examine an array
-# ||        Logical OR examines only the first element of the operands resulting into a single length logical vector.
+# &&        # Logical AND examines only the first element of the operands resulting into a single length logical vector.
+# |         # Element-wise logical OR can examine an array
+# ||        # Logical OR examines only the first element of the operands resulting into a single length logical vector.
 
 # Sub-setting operators
 # $     used for sub-setting a nested object, ie taking only one column from a dataframe
@@ -73,18 +73,18 @@ x3 <- 44/4*100 # this code will run
 # %/%  Integer division
 # Addition and subtraction
 
-1 + 2 # = 3
+1 + 2  # = 3
 10 - 5 # =5
 
 # multiplication and division
 10 * 2 # = 20
-10/2  # = 5
+10/2   # = 5
 
 # exponents and roots
 10^2  # = 100
 10^3  # = 1000
 
-100^(1/2) # square root = 10
+100^(1/2)   # square root = 10
 1000^(1/3)  # cubic root = 10
 
 # BOMDAS/ PEMDAS
@@ -292,15 +292,16 @@ str(fake_apm)            # what is the dataframe structure
 
 # What can you do with a dataframe?
 # we can subset the columns that we are interested in
-fake_apm_subset <- fake_apm[, c("ID", "DSF", "II_total_Score")]
+fake_apm_subset <- fake_apm[, c("ID", "DSF", "II_total_Score")]        # subset the dataframe by column name
 
 # perform a correlation
-DSF_Score_r <- with(fake_apm_subset,
-                    cor(DSF, II_total_Score))
+DSF_Score_r <- with(fake_apm_subset,                                   # use with to use data set in the cor() function
+                    cor(DSF, II_total_Score))                          # correlate X and Y
 
 # generate a scatter plot:
-with(fake_apm_subset,
-     plot(x = DSF, y = II_total_Score,
-          pch = 19, frame = FALSE,
-          main = paste0("XY Correlation =", round(DSF_Score_r, 3))))
-abline(lm(II_total_Score~DSF, data = fake_apm_subset), col = "blue")
+with(fake_apm_subset,                                                  # using with() you can specifiy a data set to use
+     plot(x = DSF, y = II_total_Score,                                 # plot x and y
+          pch = 19,                                                    # point shape
+          frame = FALSE,                                               # remove outer plot border
+          main = paste0("XY Correlation =", round(DSF_Score_r, 3))))   # Plot title
+abline(lm(II_total_Score~DSF, data = fake_apm_subset), col = "blue")   # Regression line using lm()
