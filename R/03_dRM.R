@@ -58,6 +58,7 @@ fake_lr <- LRtest(fake_rm, splitcr = "median") # Global Goodness of Fit test
 summary(fake_lr)                               # view full summary
 fake_lr                                        # view abbreviated output: Chi-square and p value
 
+## p> .05 mean there is a model fit using the LR test split criteria
 
 # plot goodness of fit test: plots estimates from LR subsets ~~~~~~
 
@@ -70,8 +71,9 @@ plotGOF(fake_lr,                                                          # LRte
         xlab = "Score <= Median",                                         # x axis label
         ylab = "Score > Median")                                          # y axis label
 
+# see ?plotGOF for help
 
-plotjointICC(fake_rm, legend = FALSE)  # plot theoretical ICC
+plotjointICC(fake_rm, legend = FALSE)  # plot theoretical ICC for all items
 
 # Person-Item Map ---------------------------------------------------------
 
