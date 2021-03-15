@@ -30,7 +30,7 @@ This ReadMe details how to use materials in this repository. See
     │   ├── 01_package-installs.R
     |   ├── 02_setup.R
     |   ├── 03_dRM.R
-    |   └── 04_PCM.R
+    |   └── Section_04_example.R
     ├── docs
     │   └── Graphical-Methods-for-Psychometric-Model-Selection.pdf
     └── ReadMe.md
@@ -41,8 +41,8 @@ All R code for this repository is stored in the R folder.
 `R/01_package_installs.R` contains the code you need to install R
 extension packages, including psketti. Example plots, similar to those
 in the presentation slides, can be produced in `R/03_dRM.R`, which
-contains an example **dichotomous Rasch Model**, and `R/04_PCM.R`, which
-contains an example **Rasch Partial Credit Model**.
+contains an example **dichotomous Rasch Model**. Examples presented in
+sectio 04 of the talk are contained in Sction\_04\_example.R
 
 ## 03 Using R
 
@@ -99,8 +99,8 @@ environment.
 rnorm(n = 10, mean = 100, sd = 15)        # outputs directly to the console
 ```
 
-    ##  [1]  93.24020  77.99301  83.29007  78.80562 115.15239  83.30422  90.79982
-    ##  [8] 100.55956 106.64391  82.22702
+    ##  [1] 102.48829 112.41140  96.59383  86.37901  80.24630 113.36745  95.44046
+    ##  [8]  85.42993 123.67319  99.40857
 
 We need to store the output in an object. This way, our output will save
 to the environment and we can do things with it:
@@ -117,7 +117,7 @@ We can print the first 6 values of x directly to the console:
 head(x, n = 6L) # show first n = 6 values ## (6L is integer 6)
 ```
 
-    ## [1] 111.90547 118.49511  78.68794  88.96350  89.18858 123.08010
+    ## [1] 100.38700  84.40425  58.40483  91.27203  79.36357  82.65770
 
 We can print a summary of x to the console:
 
@@ -126,7 +126,7 @@ summary(x)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##   49.44   90.08  100.17  100.25  110.37  141.28
+    ##   54.63   90.25  101.01  100.62  110.38  152.68
 
 We can produce a histogram of x, viewable in the plots pane:
 
@@ -153,5 +153,5 @@ cat(paste0("Mean of x: ",
              "SD of x: ", round(x_sd, 2)))
 ```
 
-    ## Mean of x: 100.25
-    ## SD of x: 14.89
+    ## Mean of x: 100.62
+    ## SD of x: 15.08
