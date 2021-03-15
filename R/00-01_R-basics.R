@@ -298,6 +298,7 @@ fake_apm_subset <- fake_apm[, c("ID", "DSF", "II_total_Score")]        # subset 
 DSF_Score_r <- with(fake_apm_subset,                                   # use with to use data set in the cor() function
                     cor(DSF, II_total_Score))                          # correlate X and Y
 
+# highlight the following lines together, then run, to plot the whole plot in one go:
 # generate a scatter plot:
 with(fake_apm_subset,                                                  # using with() you can specifiy a data set to use
      plot(x = DSF, y = II_total_Score,                                 # plot x and y
