@@ -9,9 +9,8 @@ This ReadMe details how to use materials in this repository. See
 Here is the recording of the talk I gave in the School of Applied
 Psychology, University College Cork (21, March 2021)
 
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/5c7c0579-e4c8-4314-975f-4d87857834d5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;">
-</iframe>
-
+[![Watch the
+video](img/Slide-title.png)](https://web.microsoftstream.com/video/5c7c0579-e4c8-4314-975f-4d87857834d5)
 </br>
 
 ## 01 Setup
@@ -109,8 +108,8 @@ environment.
 rnorm(n = 10, mean = 100, sd = 15)        # outputs directly to the console
 ```
 
-    ##  [1] 112.40645 128.27998 103.06152  91.22196  94.95278 103.49092  94.91202
-    ##  [8]  90.16666  94.17019 111.13949
+    ##  [1] 106.61145 101.70308  87.23058  86.44134  93.51576  89.42041  89.85973
+    ##  [8] 101.39587  98.44629 110.64268
 
 We need to store the output in an object. This way, our output will save
 to the environment and we can do things with it:
@@ -127,7 +126,7 @@ We can print the first 6 values of x directly to the console:
 head(x, n = 6L) # show first n = 6 values ## (6L is integer 6)
 ```
 
-    ## [1] 100.36027  78.41083 118.60065  98.10915  90.40471 134.22405
+    ## [1]  85.78194  99.55229  90.69634  95.71847 106.52124  96.92893
 
 We can print a summary of x to the console:
 
@@ -136,7 +135,7 @@ summary(x)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##   38.09   90.92  100.56  100.44  109.94  141.87
+    ##   48.18   89.72  100.24  100.10  109.83  151.14
 
 We can produce a histogram of x, viewable in the plots pane:
 
@@ -163,5 +162,5 @@ cat(paste0("Mean of x: ",
              "SD of x: ", round(x_sd, 2)))
 ```
 
-    ## Mean of x: 100.44
-    ## SD of x: 14.89
+    ## Mean of x: 100.1
+    ## SD of x: 15.01
