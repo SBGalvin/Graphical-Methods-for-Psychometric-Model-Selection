@@ -4,6 +4,16 @@
 This ReadMe details how to use materials in this repository. See
 <https://github.com/SBGalvin/psketti> for more information on psketti.
 
+## 00 Recorded Talk
+
+Here is the recording of the talk I gave in the School of Applied
+Psychology, University College Cork (21, March 2021)
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/5c7c0579-e4c8-4314-975f-4d87857834d5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;">
+</iframe>
+
+</br>
+
 ## 01 Setup
 
 1.  First go to the R website and download the latest version of
@@ -11,7 +21,7 @@ This ReadMe details how to use materials in this repository. See
 2.  Then go to the Rstudio link and download the latest **FREE** version
     of [Rstudio](https://rstudio.com/products/rstudio/download/)  
 3.  Once the download has completed, open Rstudio
-4.  Click File \> New Project…
+4.  Click File &gt; New Project…
 
 </br> <img src ="img/NewPrj_1.png" align ="center" width="200"/>
 <img src ="img/NewPrj_2.png" align ="center" width="200"/>
@@ -99,8 +109,8 @@ environment.
 rnorm(n = 10, mean = 100, sd = 15)        # outputs directly to the console
 ```
 
-    ##  [1] 102.48829 112.41140  96.59383  86.37901  80.24630 113.36745  95.44046
-    ##  [8]  85.42993 123.67319  99.40857
+    ##  [1] 112.40645 128.27998 103.06152  91.22196  94.95278 103.49092  94.91202
+    ##  [8]  90.16666  94.17019 111.13949
 
 We need to store the output in an object. This way, our output will save
 to the environment and we can do things with it:
@@ -117,7 +127,7 @@ We can print the first 6 values of x directly to the console:
 head(x, n = 6L) # show first n = 6 values ## (6L is integer 6)
 ```
 
-    ## [1] 100.38700  84.40425  58.40483  91.27203  79.36357  82.65770
+    ## [1] 100.36027  78.41083 118.60065  98.10915  90.40471 134.22405
 
 We can print a summary of x to the console:
 
@@ -126,7 +136,7 @@ summary(x)
 ```
 
     ##    Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
-    ##   54.63   90.25  101.01  100.62  110.38  152.68
+    ##   38.09   90.92  100.56  100.44  109.94  141.87
 
 We can produce a histogram of x, viewable in the plots pane:
 
@@ -153,5 +163,5 @@ cat(paste0("Mean of x: ",
              "SD of x: ", round(x_sd, 2)))
 ```
 
-    ## Mean of x: 100.62
-    ## SD of x: 15.08
+    ## Mean of x: 100.44
+    ## SD of x: 14.89
